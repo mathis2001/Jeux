@@ -1,4 +1,5 @@
 import socket
+
 host="127.0.0.7"
 port=1337
 s=socket.socket()
@@ -13,6 +14,7 @@ print(data.decode())
 data=s.recv(512)
 print(data.decode())
 rep=int(input(""))
+
 while( True ):
     if (data != "win"):
         rep=int(input(""))
@@ -22,4 +24,5 @@ while( True ):
     else:
         print("fin de la partie")
         break
+        
 s.close()
